@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hourvideo"
+version = "1.0"
+description = "HourVideo: 1-Hour Video-Language Understanding"
+readme = "README.md"
+license = {text = "Apache 2.0"}
+authors = [{name = "Keshigeyan Chandrasegaran", email = "keshik@stanford.edu"}]
+requires-python = ">=3.9"
+
+
+[tool.setuptools.packages.find]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*", "ego4d*", "frames", "prompts", "hourvideo_release*", "gpt4_captioner_image_sequence"]
+
+[tool.wheel]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*",  "ego4d*", "frames", "prompts", "hourvideo_release*", "gpt4_captioner_image_sequence"]
